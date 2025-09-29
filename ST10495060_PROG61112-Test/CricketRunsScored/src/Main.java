@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class RunApplication {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the cricketer name: ");
+        String batsman = input.nextLine();
+
+        System.out.print("Enter the stadium: ");
+        String stadium = input.nextLine();
+
+        System.out.print("Enter the total runs scored by " + batsman + " at " + stadium + ": ");
+        int runs = input.nextInt();
+
+        // Create object and print report
+        CricketRunsScored report = new CricketRunsScored(batsman, stadium, runs);
+        report.printReport();
+
+        input.close();
+    }
+}
